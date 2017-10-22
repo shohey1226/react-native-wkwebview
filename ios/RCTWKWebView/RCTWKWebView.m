@@ -88,6 +88,14 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
   [_webView loadRequest:request];
 }
 
+-(void)setKeyboardDisplayRequiresUserAction:(BOOL)keyboardDisplayRequiresUserAction
+{
+  if (!keyboardDisplayRequiresUserAction) {
+    [self keyboardDisplayDoesNotRequireUserAction];
+  }
+}
+
+
 -(void)setHideKeyboardAccessoryView:(BOOL)hideKeyboardAccessoryView
 {
   if (!hideKeyboardAccessoryView) {

@@ -203,6 +203,10 @@ var WKWebView = React.createClass({
      */
     hideKeyboardAccessoryView: PropTypes.bool,
     /**
+     * Accept keyboard input without clicking.
+    */
+    keyboardDisplayRequiresUserAction: PropTypes.bool,
+    /**
      * Sets the customized user agent by using of the WKWebView
     */
     customUserAgent: PropTypes.string,
@@ -292,6 +296,7 @@ var WKWebView = React.createClass({
         automaticallyAdjustContentInsets={this.props.automaticallyAdjustContentInsets}
         openNewWindowInWebView={this.props.openNewWindowInWebView}
         hideKeyboardAccessoryView={this.props.hideKeyboardAccessoryView}
+        keyboardDisplayRequiresUserAction={this.props.keyboardDisplayRequiresUserAction}
         onLoadingStart={this._onLoadingStart}
         onLoadingFinish={this._onLoadingFinish}
         onLoadingError={this._onLoadingError}
